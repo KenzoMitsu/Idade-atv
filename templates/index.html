@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr"> <!-- Especifíca a direção do texto presente na página e o idioma -->
+<head>
+    <meta charset="UTF-8"> <!-- Define um padrão de codificação de caracteres -->
+    <title>Medidor de idade</title> <!-- Define um título para a página -->
+</head>
+<body>
+  <h1>Verificador de Idade</h1> <!-- Título principal da página -->
+    <form action="/resultado" method="post"> <!-- Formulário para enviar o número para verificação -->
+        <label for="numero">Digite sua idade:</label> <!-- Rótulo (texto) do campo de entrada -->
+        <input type="text" id="numero" name="numero" required> <!-- Campo de entrada para o número -->
+        <button type="submit">Verificar</button> <!-- Botão de envio do formulário -->
+    </form>
+    <div id="resultado">
+        {% if resultado %} <!-- Verifica se há um resultado a ser exibido -->
+            {{ resultado }}
+        {% endif %} <!-- Finaliza a ação -->
+    </div>
+</body>
+</html>
